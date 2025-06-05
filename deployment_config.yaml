@@ -1,0 +1,7 @@
+stdin: true
+name: Trading News Agent
+summary: An AI agent that identifies companies based on a user-specified market or theme, fetches relevant news, updates company facts, and generates hourly investment recommendations using the Google Gemini API and Google Search.
+environment_variables:
+  - name: GEMINI_API_KEY
+    value: <your_gemini_api_key>
+    description: The API key for authenticating with the Google Gemini API, required for generative AI model requests.
