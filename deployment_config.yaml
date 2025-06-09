@@ -1,0 +1,7 @@
+stdin: true # The agent requires interactive input from stdin for the initial target query.
+name: Trading News Agent
+summary: A financial market sentiment analysis agent that tracks companies based on a user-defined market/sector/theme, fetches recent news, updates relevant facts, and generates investment recommendations hourly.
+environment_variables:
+  - name: GEMINI_API_KEY
+    value: <your_gemini_api_key>
+    description: The API key required to authenticate with the Google Gemini API for generative AI model calls.
