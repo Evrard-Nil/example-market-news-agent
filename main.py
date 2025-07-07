@@ -25,7 +25,6 @@ safety_settings = [
     ),
 ]
 
-google_search_tool = Tool(google_search=GoogleSearch())
 
 
 def run_llm_inference(
@@ -61,7 +60,6 @@ def run_llm_inference_with_grounding(
     # print(f"   System Prompt: {system_prompt}")
     # print(f"   User Prompt: {prompt[:250]}...")
 
-    google_search_tool = Tool(google_search=GoogleSearch())
 
     response = client.models.generate_content(
         model=model_name,
