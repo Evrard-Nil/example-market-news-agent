@@ -31,9 +31,16 @@ google_search_tool = Tool(google_search=GoogleSearch())
 def run_llm_inference(
     prompt: str, system_prompt: str = "You are a helpful AI assistant."
 ) -> str:
-    """
-    LLM call.
-    """
+    Performs an LLM (Large Language Model) inference call to generate content based on a given prompt.
+
+    Args:
+        prompt (str): The user's input or query for the LLM.
+        system_prompt (str, optional): A system-level instruction or persona for the LLM.
+                                       Defaults to "You are a helpful AI assistant.".
+
+    Returns:
+        str: The generated text content from the LLM. Returns an empty string if no content is generated.
+    
     # print(f"   System Prompt: {system_prompt}")
     # print(f"   User Prompt: {prompt[:250]}...")
     response = client.models.generate_content(
@@ -55,9 +62,18 @@ def run_llm_inference_with_grounding(
     prompt: str,
     system_prompt: str = "You are a helpful AI assistant.",
 ) -> str:
-    """
-    LLM call that uses grounding sources.
-    """
+    Performs an LLM (Large Language Model) inference call with grounding sources (e.g., Google Search)
+    to enhance the LLM's response with external information.
+
+    Args:
+        prompt (str): The user's input or query for the LLM.
+        system_prompt (str, optional): A system-level instruction or persona for the LLM.
+                                       Defaults to "You are a helpful AI assistant.".
+
+    Returns:
+        str: The generated text content from the LLM, potentially grounded with external information.
+             Returns an empty string if no content is generated.
+    
     # print(f"   System Prompt: {system_prompt}")
     # print(f"   User Prompt: {prompt[:250]}...")
 
