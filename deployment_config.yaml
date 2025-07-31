@@ -1,0 +1,9 @@
+name: trading-news-agent
+summary: An agent that tracks financial news for specified markets/sectors, analyzes sentiment, and generates investment recommendations for relevant companies.
+environment_variables:
+  - name: GEMINI_API_KEY
+    value: <your_gemini_api_key>
+    description: The Google Gemini API key to authenticate with the AI model.
+  - name: TARGET_QUERY
+    value: <your_target_query>
+    description: The initial market, sector, or theme for which the agent should identify and track companies (e.g., "US Semiconductor Market").
