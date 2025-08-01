@@ -1,0 +1,9 @@
+name: trading-news-agent
+summary: An agent that identifies companies based on a target market query, fetches recent news for them, updates relevant facts, and generates hourly investment recommendations based on the gathered information.
+environment_variables:
+  - name: GEMINI_API_KEY
+    value: <your_gemini_api_key>
+    description: The API key for authenticating with the Google Gemini AI service. This key is required to make calls to the google.genai client.
+  - name: TARGET_QUERY
+    value: <your_target_query>
+    description: Specifies the initial query or theme (e.g., "US Semiconductor Market") that the SentimentAnalysisAgent uses to identify relevant companies for tracking and analysis.
